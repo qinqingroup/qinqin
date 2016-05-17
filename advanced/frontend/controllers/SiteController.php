@@ -18,6 +18,7 @@ use yii\filters\AccessControl;
  */
 class SiteController extends Controller
 {
+	public $layout=false;
     /**
      * @inheritdoc
      */
@@ -72,9 +73,20 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        return $this->render('index');	
     }
-
+	public function actionTop()
+	{
+		return $this->render('top');
+	}
+	public function actionLeft()
+	{
+		return $this->render('left');
+	}
+	public function actionMain()
+	{
+		return $this->render('main');
+	}
     /**
      * Logs in a user.
      *
