@@ -1,5 +1,5 @@
 <?php
-//phpinfo();die;
+
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';

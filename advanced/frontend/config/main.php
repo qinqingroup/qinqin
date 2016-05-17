@@ -6,17 +6,21 @@ $params = array_merge(
     require(__DIR__ . '/params-local.php')
 );
 
+
 return [
-    'id' => 'app-backend',
+    'defaultRoute' => 'site',
+    'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
         ],
+
+        
+        
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
