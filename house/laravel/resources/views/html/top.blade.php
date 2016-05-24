@@ -35,8 +35,16 @@
                         <li><a href="features.htm"><span>房屋特点</span></a></li>
                         <li><a href="contact.htm"><span>联系我们</span></a></li>
                     </ul>
+                   	<?php if(!empty($_COOKIE['name'])){ ?>
+					<a class="btn btn-theme navbar-btn btn-default sign-in">欢迎 <?php echo $_COOKIE['name']?>登陆</a>
+                   <!--<a class="btn btn-theme navbar-btn btn-orange  sign-up" href="#">退出</a>-->
+					<a class="btn btn-theme navbar-btn btn-default sign-in" href="{{url('users')}}">个人中心</a>
+					<?php }else{ ?>
                     <a class="btn btn-theme navbar-btn btn-default sign-in" href="{{url('login')}}">登录</a>
-                    <a class="btn btn-theme navbar-btn btn-orange  sign-up" href="{{url('reg')}}">注册</a>
+                    <a class="btn btn-theme navbar-btn btn-orange  sign-up" href="{{url('tui')}}">注册</a>
+					<?php
+					}
+					?>
                 </div>
                 </div>
             </nav>

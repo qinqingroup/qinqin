@@ -71,7 +71,7 @@
     </header>
     
     <section class="container content content-light">
-        <p class="header text-center">不住酒店，住 &nbsp;&nbsp;&nbsp;<span style="color: brown; font-size: 70px;">天朝</span> </p>
+        <p class="header text-center">别住酒店，住<strong>天朝</strong> </p>
         <p class="text-center">选择我们没有错  给我们机会  给您信任</p>
         
         <hr class="invisible" />
@@ -186,62 +186,28 @@
                         <img src="img/213x213.gif" class="img-rounded" alt="Chuck Dorothe" />
                         <figcaption>房源1号 <em>Reduced room</em></figcaption>
                     </figure>
-                    <p class="button-full"><a href="{{url('housing')}}" class="btn btn-theme btn-green" data-content="10 Tutorials" data-placement="bottom"><i class="fa fa-play"></i> 详情</a></p>
+                    <p class="button-full"><a href="videos-list.htm" class="btn btn-theme btn-green" data-content="10 Tutorials" data-placement="bottom"><i class="fa fa-play"></i> 详情</a></p>
                 </div>
                 <div class="col-md-3">
                     <figure>
                         <img src="img/213x213.gif" class="img-rounded" alt="Adam Sandler" />
                         <figcaption>房源2号 <em>Language Trainer</em></figcaption>
                     </figure>
-                    <p class="button-full"><a href="{{url('housing')}}" class="btn btn-theme btn-green" data-content="15 Tutorials" data-placement="bottom"><i class="fa fa-play"></i> 详情</a></p>
+                    <p class="button-full"><a href="videos-list.htm" class="btn btn-theme btn-green" data-content="15 Tutorials" data-placement="bottom"><i class="fa fa-play"></i> 详情</a></p>
                 </div>
                 <div class="col-md-3">
                     <figure>
                         <img src="img/213x213.gif" class="img-rounded" alt="Susan Westwik" />
                          <figcaption>房源3号 <em>Marketing Manager</em></figcaption>
                     </figure>
-                    <p class="button-full"><a href="{{url('housing')}}" class="btn btn-theme btn-green" data-content="23 Tutorials" data-placement="bottom"><i class="fa fa-play"></i> 详情</a></p>
+                    <p class="button-full"><a href="videos-list.htm" class="btn btn-theme btn-green" data-content="23 Tutorials" data-placement="bottom"><i class="fa fa-play"></i> 详情</a></p>
                 </div>
 				<div class="col-md-3">
                     <figure>
                         <img src="img/213x213.gif" class="img-rounded" alt="Susan Westwik" />
                         <figcaption>房源4号 <em>Marketing Manager</em></figcaption>
                     </figure>
-                    <p class="button-full"><a href="{{url('housing')}}" class="btn btn-theme btn-green" data-content="23 Tutorials" data-placement="bottom"><i class="fa fa-play"></i> 详情</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-<section class="content content-light">
-        <div class="container">
-            <h1><p class="text-center">访客保障计划</p></h1>    
-			<br><br>
-            <div class="row our-team">
-                <div class="col-md-3">
-                    <figure>
-                        <a href="{{url('safelist')}}"><img src="img/safe2.png" class="img-rounded" alt="Chuck Dorothe" style="background-color: cyan"/>
-                        <figcaption>入住前一天 无条件退款</figcaption></a>
-                    </figure>
-                </div>
-                <div class="col-md-3">
-                    <figure>
-                        <a href=""><img src="img/safe3.png" class="img-rounded" alt="Adam Sandler" style="background-color: brown" /></a>
-                        <figcaption>到店无房 赔首晚房费</figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-3">
-                    <figure>
-                        <a href=""><img src="img/safe4.png" class="img-rounded" alt="Susan Westwik" style="background-color: darkcyan"/></a>
-                         <figcaption>付款到天朝 资金有保障</figcaption>
-                    </figure>
-                </div>
-				<div class="col-md-3">
-                    <figure>
-                        <a href=""><img src="img/safe1.png" class="img-rounded" alt="Susan Westwik" style="background-color: sienna" /></a>
-                        <figcaption>保障入住 天朝补差价</figcaption>
-                    </figure>
+                    <p class="button-full"><a href="videos-list.htm" class="btn btn-theme btn-green" data-content="23 Tutorials" data-placement="bottom"><i class="fa fa-play"></i> 详情</a></p>
                 </div>
             </div>
         </div>

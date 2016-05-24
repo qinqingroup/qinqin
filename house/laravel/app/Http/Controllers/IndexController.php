@@ -1,13 +1,13 @@
 <?php
-
 namespace App\Http\Controllers;
-
+use App\Http\Requests;
+use Request,Validator,DB;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-
-use DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Cookie;
 
 class IndexController extends BaseController
 {
@@ -19,23 +19,35 @@ class IndexController extends BaseController
 	public function classindex(){
 		return view("html.index");
 	}
-
 	//注册页面
 	public function register(){
-		return view("html.register");
+		$user=DB::table('region')
+			->select()
+			->where(['parent_id'=>0])
+			->get();
+		return view("html.register",["region"=>$user]);
 	}
-
+	public function regs(){
+		$id=$_GET['id'];
+		$city=DB::table('region')
+			->select()
+			->where(['parent_id'=>$id])
+			->get();
+		if($city){
+			echo json_encode($city);
+		}else{
+			echo 0;
+		}
+	}
 	//登陆页面
 	public function login(){
 		return view("html.login");
 	}
+
 	//房源详情
 	public function housing(){
 	header("content-type:text/html;charset=utf-8");
 		$house = DB::table('house')->where('house_id','29')->get();
-		
-
-
 		return view("html.housing");
 	}
 	//个人中心首页
@@ -54,11 +66,5 @@ class IndexController extends BaseController
 
 		return view('html.headpor');
 	}
-
-	//访客保障计划
-	public function safelist(){
-		
-		return view('html.safe');
-	}
-
 }
+

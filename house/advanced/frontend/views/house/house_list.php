@@ -7,6 +7,10 @@ use yii\widgets\LinkPager;
 	<head>
 		<meta charset="utf-8" />
 		<title>房源信息展示</title>
+		<meta name="keywords" content="Bootstrap模版,Bootstrap模版下载,Bootstrap教程,Bootstrap中文" />
+		<meta name="description" content="站长素材提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 		<!-- basic styles -->
 
 		<link href="<?= Yii::$app->request->baseUrl?>/assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -113,7 +117,7 @@ use yii\widgets\LinkPager;
 														<th>房屋名称</th>
 														<th>房屋价格</th>
 														<th><i class="icon-time bigger-110 hidden-480"></i>添加时间</th>
-														<th class="hidden-480">房屋审核状态</th>
+														<th class="hidden-480">房屋状态</th>
 
 														<th></th>
 													</tr>
@@ -136,14 +140,7 @@ use yii\widgets\LinkPager;
 														<td class="hidden-480">
 															<span class="label label-sm label-warning">
 															 
-															    <?php if($v['house_state']==1){
-																	echo "正在审核中";
-																
-																}else if($v['house_state']==2){
-																	echo "审核通过";
-																}else if($v['house_state']==3){
-																	echo "审核未通过";
-																}?>
+															    <?php echo $v['house_state']?>
 															</span>
 														</td>
 
@@ -202,6 +199,7 @@ use yii\widgets\LinkPager;
 													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 														<span class="white">&times;</span>
 													</button>
+													Results for "Latest Registered Domains
 												</div>
 											</div>
 

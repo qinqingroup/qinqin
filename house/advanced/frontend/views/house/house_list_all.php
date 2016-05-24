@@ -146,14 +146,8 @@ use yii\widgets\LinkPager;
                                                     <td>房屋户型</td>
                                                     <td><?= $h_details['house_apartment'] ?></td>
                                           
-                                                    <td>房屋审核状态</td>
-                                                    <td><?php  if($h_details['house_state']==1){
-														echo "正在审核中";
-													}else if($h_details['house_state']==2){
-														echo "审核已通过";
-													}else if($h_details['house_state']==3){
-														echo "审核未通过";
-													} ?></td>
+                                                    <td>房屋状态</td>
+                                                    <td><?= $h_details['house_state'] ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>是否精品</td>

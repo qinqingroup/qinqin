@@ -193,7 +193,7 @@
 								</li>
 
 								<li>
-									<a href="index.php?r=house/check">
+									<a href="index.php?r=index/jqgrid">
 										<i class="icon-double-angle-right"></i>
 										房源审核
 									</a>

@@ -6,8 +6,6 @@ use Yii;
 use yii\web\Controller;
 use yii\web\UploadedFile;
 use frontend\models\Photo;
-
-use yii\web\ErrorHandler;
 //分页
 use \yii\data\Pagination;
 use frontend\models\House;
@@ -186,42 +184,5 @@ class HouseController extends Controller
 	   {
 	   	   echo 0;
 	   }	
-	}
-
-	//房源审核
-	public function actionCheck(){
-		
-		//分页
-		$query = House::find()->where(['house_state' => 1]);
-		$countQuery = clone $query;
-		$pages = new Pagination(['totalCount' => $countQuery->count(),'pageSize'=>4]);
-		$models = $query->offset($pages->offset)
-			->limit($pages->limit)
-			->asArray()
-			->all();
-
-		return $this->render('house_check', [
-			 'arr' => $models,
-			 'pages' => $pages,
-		]);	
-	}
-	//审核状态修改
-	public function actionUpstate(){
-		$id=Yii::$app->request->get('id');
-		$state=Yii::$app->request->get('state');
-		//审核1.正在审核中 2.审核通过  3.审核不通过
-		if($state==1){
-			$state=2;
-		}else if($state==2){
-			$state=3;
-		}
-		$db=Yii::$app->db;
-		$re=$db->createCommand()->update('house', ['house_state' => $state], "house_id = $id")->execute();
-		if($re){
-			$this->redirect("index.php?r=house/check");
-		}else{
-			exit("修改失败");
-		}
-
 	}
 }

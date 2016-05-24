@@ -39,92 +39,19 @@
     <section class="content content-light">
         <div class="container">
             <!-- Category boxes with icon & name -->
+			
             <div class="row category-box-row">
+			@foreach($user as $k=>$v)
                 <div class="col-md-4">
-                    <a href="{{url('headportrait')}}" class="category-box-item">
-                        <i class="fa fa-camera fa-5x"></i>
-                        <h2>头像</h2>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="videos-grid.htm" class="category-box-item">
-                        <i class="fa fa-cogs fa-5x"></i>
-                        <h2>修改密码</h2>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="videos-grid.htm" class="category-box-item">
-                        <i class="fa fa-list-alt fa-5x"></i>
-                        <h2>住过的房</h2>
-                    </a>
-                </div>
+                    <a href="{{ $v->p_url }}" class="category-box-item">
+                        <i class="{{$v->p_photo}}"></i>
+                        <h2>{{ $v->p_name }}</h2>
+                    </a>	
+                </div> 
+			@endforeach
             </div>
             <!-- Category boxes with icon & name -->
-            <div class="row category-box-row">
-                <div class="col-md-4">
-                    <a href="{{url('userlist')}}" class="category-box-item">
-                        <i class="fa fa-female fa-5x"></i>
-                        <h2>个人信息</h2>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="videos-grid.htm" class="category-box-item">
-                        <i class="fa fa-book fa-5x"></i>
-                        <h2>我的订单</h2>
-                    </a>
-                </div>
-                  <div class="col-md-4">
-                    <a href="videos-grid.htm" class="category-box-item">
-                        <i class="fa fa-list-alt fa-5x"></i>
-                        <h2>收藏的房屋</h2>
-                    </a>
-                </div>
-              
-           
-            <div class="col-md-4">
-                    <a href="videos-grid.htm" class="category-box-item">
-                        <i class="fa fa-signal fa-5x"></i>
-                        <h2>我的评价</h2>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="videos-grid.htm" class="category-box-item">
-                        <i class="fa fa-camera-retro fa-5x"></i>
-                        <h2>钱包</h2>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="videos-grid.htm" class="category-box-item">
-                        <i class="fa fa-wrench fa-5x"></i>
-                        <h2>修改个人信息</h2>
-                    </a>
-                </div>
-
-           </div>
-            <!-- Category boxes with icon & name -->
-            <div class="row category-box-row category-box-row-hidden"> 
-                     
-                <div class="col-md-4">
-                    <a href="videos-grid.htm" class="category-box-item">
-                        <i class="fa fa-wrench fa-5x"></i>
-                        <h2>房东管理</h2>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="videos-grid.htm" class="category-box-item">
-                        <i class="fa fa-female fa-5x"></i>
-                        <h2>购买保险</h2>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="videos-grid.htm" class="category-box-item">
-                        <i class="fa fa-book fa-5x"></i>
-                        <h2>优惠/打折</h2>
-                    </a>
-                </div>
              
-            </div>
-            
             <hr class="invisible" />
             
             <p class="text-center"><a href="#more" class="btn btn-theme btn-gray" id="loadCategoryMore">加载更多</a></p>
