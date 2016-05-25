@@ -1,7 +1,6 @@
 <?php
 
 //首页展示
-
 Route::get('/',"IndexController@index3");
 //房源分类展示
 Route::get('/index',"IndexController@classindex");
