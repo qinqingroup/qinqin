@@ -94,6 +94,8 @@
 										正在入住
 									@elseif($v->order_state==3)
 										完成
+									@elseif($v->order_state==4)
+										订单被取消
 									@endif
 								</td>
 								<td>{{$v->order_number}}</td>
