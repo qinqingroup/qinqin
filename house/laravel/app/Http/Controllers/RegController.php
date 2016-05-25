@@ -61,7 +61,7 @@ class RegController extends BaseController
 				'u_area_id'=>$area,
 				'u_time'=>date("Y-m-d H:i:s")
 			)
-		);	
+		);
 		if($insert){
 			return view("html.login");
 		}

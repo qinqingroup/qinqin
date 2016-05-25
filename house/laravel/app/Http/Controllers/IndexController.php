@@ -27,6 +27,7 @@ class IndexController extends BaseController
 			->get();
 		return view("html.register",["region"=>$user]);
 	}
+	//三级联动
 	public function regs(){
 		$id=$_GET['id'];
 		$city=DB::table('region')
@@ -46,7 +47,7 @@ class IndexController extends BaseController
 
 	//房源详情
 	public function housing(){
-	header("content-type:text/html;charset=utf-8");
+		header("content-type:text/html;charset=utf-8");
 		$house = DB::table('house')->where('house_id','29')->get();
 		return view("html.housing");
 	}
