@@ -35,6 +35,7 @@ class RegController extends BaseController
 			}
         }		
 	}
+	//用户注册
 	public function userAdd(){
 		//接值  添加
 		$name=Request::input('u_name');

@@ -1,3 +1,10 @@
+<?php
+use	yii\helpers\Html;
+use yii\widgets\LinkPager;
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -200,6 +207,7 @@
 													<?php } ?>
 												</tbody>
 											</table>
+											  <?= LinkPager::widget(['pagination' => $pagination]) ?>
 										</div>
 									</div>
 								</div>

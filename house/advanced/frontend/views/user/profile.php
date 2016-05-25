@@ -154,7 +154,7 @@
 										<div class="col-xs-12 col-sm-3 center">
 											<div>
 												<span class="profile-picture">
-													<img id="avatar" class="editable img-responsive" alt="Alex's Avatar" src="<?= Yii::$app->request->baseUrl?>/uploads/user/<?php echo $v['u_photo']?>" style="width:200px;height:200px" />
+													<img id="avatar" class="editable img-responsive" alt="Alex's Avatar" src="<?= Yii::$app->request->baseUrl?>/uploads/<?php echo $v['u_photo']?>" style="width:200px;height:200px" />
 												</span>
 
 												<div class="space-4"></div>

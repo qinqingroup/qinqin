@@ -60,7 +60,7 @@
 						<li>
                             <a href="index.php?r=user/index">
                                 <i class="icon-double-angle-right"></i>
-                                <span class="menu-text">信息管理</span>
+                                <span class="menu-text">用户信息管理</span>
                             </a>
                         </li>
 

@@ -255,7 +255,7 @@ use yii\widgets\ActiveForm;
 								</li>
 
 								<li>
-									<a href="#">
+									<a href="index.php?r=user/profile&id=<?php echo $_SESSION['userid']?>">
 										<i class="icon-user"></i>
 										个人资料
 									</a>

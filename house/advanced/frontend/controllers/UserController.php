@@ -2,6 +2,9 @@
 
 namespace frontend\controllers;
 use Yii;
+use frontend\models\User;
+use yii\data\Pagination;
+
 
 /**
 * 适用范围 user
@@ -14,12 +17,25 @@ class UserController extends \yii\web\Controller
 	//展示用户信息页面
     public function actionIndex()
     {
-		$user = (new \yii\db\Query())
-            ->select(['*'])
-            ->from('user')
+	
+		$query = User::find();
+		
+        $pagination = new Pagination([
+            'defaultPageSize' =>2,
+            'totalCount' => $query->where('u_area_id!=0')->count(),
+        ]);
+
+        $countries = $query
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
 			->where('u_area_id!=0')
             ->all();
-        return $this->renderpartial("usertables",['user'=>$user]);
+
+        return $this->renderpartial('usertables', [
+            'user' => $countries,
+            'pagination' => $pagination,
+        ]);
+ 
     }	
 
 	//用户删除
