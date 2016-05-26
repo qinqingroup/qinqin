@@ -152,9 +152,9 @@
 								</li>
 							</ul>
 							@endforeach
-							<!--<div class="submit-wrap">
+							<div class="submit-wrap">
 								<a id="saveuser" class="save-btn" rel="nofollow" href="javascript:void(0)">保存</a>
-							</div>-->
+							</div>
 						</div>
 					</div>
 					<!-- 个人信息 END -->

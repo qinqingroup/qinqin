@@ -41,7 +41,7 @@
 					<a class="btn btn-theme navbar-btn btn-default sign-in" href="{{url('users')}}">个人中心</a>
 					<?php }else{ ?>
                     <a class="btn btn-theme navbar-btn btn-default sign-in" href="{{url('login')}}">登录</a>
-                    <a class="btn btn-theme navbar-btn btn-orange  sign-up" href="{{url('tui')}}">注册</a>
+                    <a class="btn btn-theme navbar-btn btn-orange  sign-up" href="{{ url('reg') }}">注册</a>
 					<?php
 					}
 					?>

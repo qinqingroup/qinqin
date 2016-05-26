@@ -93,6 +93,8 @@
 										正在入住
 									@elseif($v->order_state==3)
 										完成
+									@elseif($v->order_state==4)
+										订单被取消
 									@endif
 								</td>
 								<td>{{$v->order_number}}</td>
@@ -100,7 +102,7 @@
 									@if($v->order_state==0)
 										<a href="{{url('CancelOrder')}}?id={{$v->order_id}}">取消订单</a>
 									@elseif($v->order_state==4)
-										订单已取消</a>
+										订单已取消
 									@endif
 								</td>
 							</tr>
