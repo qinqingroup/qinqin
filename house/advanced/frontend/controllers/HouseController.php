@@ -95,8 +95,8 @@ class HouseController extends Controller
 						//图片路径
 						$photo_urls = $file->baseName . '.' . $file->extension;
 						
-						$photo_url = "http://www.selfyii2.com/uploads/".$photo_urls;
-						
+						$photo_url = "http://www.advanced.com/uploads/".$photo_urls;
+
 						//图片表入库
 						$photoSql = $connection->createCommand()->insert('photo',
 								['house_id'=>$house_id,
