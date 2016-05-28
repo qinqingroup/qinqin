@@ -1,6 +1,5 @@
 <?php
 namespace frontend\controllers;
-header("content-type:text/html;charset=utf-8");
 
 use Yii;
 use yii\web\Controller;
@@ -23,8 +22,13 @@ class HouseController extends Controller
 		$request= Yii::$app->request;
 		if($request->isPost)
 		{
+        			
 			//获取房东id
-               
+            $session = Yii::$app->session;    //实例化session
+            //开启sesion
+            $session->open();
+            $u_id=$session->get('userid');
+              
             //接受房屋数据
             $house_name=$request->post('house_name');
             $class_id=$request->post('class_id');
@@ -38,14 +42,16 @@ class HouseController extends Controller
             $house_boutique=$request->post('house_boutique');
             $house_activity=$request->post('house_activity');
             $house_heat=$request->post('house_heat');
-      
+
             //添加时间
             $house_time=date('Y-m-d H:i:s',time());
 			
+            
             //实例化添加对象
             $connection=Yii::$app->db;
             //添加房屋信息
             $houseSql=$connection->createCommand()->insert('house',[
+            		'u_id'=>$u_id,
             		'house_name'=>$house_name,
                     'class_id'=>$class_id,
                     'house_auth'=>$house_auth,
@@ -59,8 +65,10 @@ class HouseController extends Controller
                     'house_boutique'=>$house_boutique,
                     'house_activity'=>$house_activity,
                     'house_heat'=>$house_heat,
+            		'house_video'=>$house_video,
                   ])->execute();
-			
+            
+            
 			//判断
 			if($houseSql)
 			{
@@ -72,7 +80,7 @@ class HouseController extends Controller
 				}
 			    //房屋的id
 				$house_id=$ids;
-				
+								
 				//接受图片的信息
 				$photo_title=$request->post('photo_title');
 			    $is_display=$request->post('is_display');
@@ -85,7 +93,9 @@ class HouseController extends Controller
 					foreach ($photo_url as $file) {
 						$file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
 						//图片路径
-						$photo_url = $file->baseName . '.' . $file->extension;
+						$photo_urls = $file->baseName . '.' . $file->extension;
+						
+						$photo_url = "http://www.selfyii2.com/uploads/".$photo_urls;
 						
 						//图片表入库
 						$photoSql = $connection->createCommand()->insert('photo',
@@ -95,9 +105,9 @@ class HouseController extends Controller
 								'is_display'=>$is_display,
 								'is_lunbo'=>$is_lunbo])->execute();			
 					}
+					
 				}
-// 				//图片路径
-// 				$photo_url = substr($img,1);
+
 					
 				if($photoSql)
 				{
@@ -119,12 +129,14 @@ class HouseController extends Controller
 		else
 		{
 			//获取房屋类型
-			$sql='select * from class';
-			$arr=yii::$app->db->createCommand($sql)->queryAll();
+			$arr=(new \yii\db\Query())
+			     ->from('class')
+			     ->all();
 			return $this->render('house_add',['model'=>$model,'arr'=>$arr]);
 		}
-	}
-	
+	}	
+		
+ 
 	//房源信息展示
 	public function actionShow()
 	{   
@@ -150,8 +162,11 @@ class HouseController extends Controller
                   ->from('photo')
                   ->where(['house_id'=>"$house_id"])
                   ->all();
+//         var_dump($p_details);die;
 		return $this->render('house_list_all',['h_details'=>$h_details,'p_details'=>$p_details]);
 	}
+	
+	
 	
 	//删除信息
 	public function actionDel()
@@ -175,7 +190,7 @@ class HouseController extends Controller
 	{
 	   $house_id = Yii::$app->request->get('house_id');
 	   $house_name = Yii::$app->request->get('house_name');
-	   $row=Yii::$app->db->createCommand("update house set house_name = '$house_name' where house_id = '$house_id'")->execute();
+	   $row=Yii::$app->db->createCommand()->update('house',['house_name'=>$house_name],"house_id=$house_id")->execute();
 	   if($row)
 	   {
 	   	   echo 1;
@@ -185,4 +200,5 @@ class HouseController extends Controller
 	   	   echo 0;
 	   }	
 	}
+
 }
