@@ -190,7 +190,7 @@ use yii\widgets\LinkPager;
 	                                                         if($v['photo_url'])
 	                                                         {        
                                                      ?>                                        
-                                                        <img src='../web/uploads/<?= $v['photo_url']?>' height='100px' width='120px'>
+                                                        <img src='<?= $v['photo_url']?>' height='100px' width='120px'>
                                                     <?php   
 	                                                         }
 	                                                         else 
