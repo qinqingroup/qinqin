@@ -1,28 +1,27 @@
-<!--footer-->
 <div class="footer">
 	<div class="container">
 		<div class="footer-top-at">
 			<div class="col-md-3 amet-sed">
 				<h4>Our Company</h4>
 				<ul class="nav-bottom">
-					<li><a href="{{url('about')}}">About Us</a></li>
-					<li><a href="{{url('blog')}}">For Sale By Owner Blog</a></li>
-					<li><a href="{{url('mobile_app')}}">Mobile</a></li>
-					<li><a href="{{url('terms')}}">Terms & Conditions</a></li>
-					<li><a href="{{url('privacy')}}">Privacy Policy</a></li>	
-					<li><a href="{{url('blog')}}">Blog</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="blog.html">For Sale By Owner Blog</a></li>
+					<li><a href="mobile_app.html">Mobile</a></li>
+					<li><a href="terms.html">Terms & Conditions</a></li>
+					<li><a href="privacy.html">Privacy Policy</a></li>	
+					<li><a href="blog.html">Blog</a></li>
 					
 				</ul>	
 			</div>
 			<div class="col-md-3 amet-sed ">
 				<h4>Work With Us</h4>
 					<ul class="nav-bottom">
-						<li><a href="{{url('single')}}">Real Estate Brokers</a></li>
-						<li><a href="{{url('single')}}">Business Development</a></li>
-						<li><a href="{{url('single')}}">Affiliate Programs</a></li>
-						<li><a href="{{url('contact')}}">Sitemap</a></li>
-						<li><a href="{{url('career')}}">Careers</a></li>
-						<li><a href="{{url('feedback')}}">Feedback</a></li>	
+						<li><a href="single.html">Real Estate Brokers</a></li>
+						<li><a href="single.html">Business Development</a></li>
+						<li><a href="single.html">Affiliate Programs</a></li>
+						<li><a href="contact.html">Sitemap</a></li>
+						<li><a href="career.html">Careers</a></li>
+						<li><a href="feedback.html">Feedback</a></li>	
 					</ul>	
 			</div>
 			<div class="col-md-3 amet-sed">
@@ -32,18 +31,19 @@
 				<p>177-869-6559</p>
 					<ul class="nav-bottom">
 						<li><a href="#">Live Chat</a></li>
-						<li><a href="{{url('faqs')}}">Frequently Asked Questions</a></li>
-						<li><a href="{{url('suggestion')}}">Make a Suggestion</a></li>
+						<li><a href="faqs.html">Frequently Asked Questions</a></li>
+						<li><a href="suggestion.html">Make a Suggestion</a></li>
 					</ul>	
 			</div>
 			<div class="col-md-3 amet-sed ">
 				<h4>Property Services</h4>
 				   <ul class="nav-bottom">
-						<li><a href="{{url('single')}}">Residential Property</a></li>
-						<li><a href="{{url('single')}}">Commercial Property</a></li>
-						<li><a href="{{url('login')}}">Login</a></li>
-						<li><a href="{{url('register')}}">Register</a></li>
-						<li><a href="{{url('typo')}}">Short Codes</a></li>	
+						<li><a href="single.html">Residential Property</a></li>
+						<li><a href="single.html">Commercial Property</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+						<li><a href="typo.html">Short Codes</a></li>
+						<li><a href="{{url('index/safe')}}" >Tenant security plan</a></li>	
 					</ul>	
 					<ul class="social">
 						<li><a href="#"><i> </i></a></li>
@@ -59,10 +59,10 @@
 	<div class="footer-bottom">
 		<div class="container">
 			<div class="col-md-4 footer-logo">
-				<h2><a href="{{url('index')}}">REAL HOME</a></h2>
+				<h2><a href="index.html">REAL HOME</a></h2>
 			</div>
 			<div class="col-md-8 footer-class">
-				<p >Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+				<p >Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/"></a></p>
 			</div>
 		<div class="clearfix"> </div>
 	 	</div>

@@ -12,46 +12,81 @@
 */
 //展示首页面
 Route::get('/', 'IndexController@index');
-Route::get('/index', 'IndexController@index');
+Route::get('/index/index', 'IndexController@index');
 //展示登陆
 Route::get('/login', 'IndexController@login');
-//列表展示
-Route::get('/about', 'IndexController@about');
 
-Route::get('/blog', 'IndexController@blog');
 
-Route::get('/blog_single', 'IndexController@blog_single');
 
-Route::get('/buy', 'IndexController@buy');
+//关于我们
+Route::get('/index/about', 'IndexController@about');
+//注册展示
+Route::get('/reg', 'IndexController@register');
+//三级联动
+Route::get('/regs',"IndexController@regs");
+//注册验证昵称的唯一性
+Route::get('/nickname','RegController@nickname');
+//注册添加
+Route::post('/userAdd','RegController@userAdd');
+//登陆
+Route::post('/logins','LoginController@logins');
+//退出
+Route::get('/tui','LoginController@tui');
+//个人中心
+Route::get('/user', 'UserController@index');
+//我的收藏
+Route::get('/collect', 'UserController@collect');
+//删除收藏
+Route::get('/collectDel', 'UserController@collectDel');
+//房东的订单管理
+Route::get('/orderList', 'UserController@orderList');
+//房客的订单管理
+Route::get('/ordersList', 'UserController@ordersList');
+//房源管理
+Route::get('/housingList', 'UserController@housingList'); 
+//房客取消订单
+Route::get('/CancelOrder', 'UserController@CancelOrder'); 
+//房源删除
+Route::get('/houseDel', 'UserController@houseDel'); 
+//头像的修改
+Route::post('/photoUpdate','UserController@photoUpdate');
+//房源信息修改
+Route::get('/housingUpdate','UserController@housingUpdate');
+//电话号码即点即改
+Route::get('/phoneUpd','UserController@phoneUpd');
+//邮箱
+Route::get('/emailUpd','UserController@emailUpd');
+//实名认证
+Route::get('/auth','UserController@auth');
+//实名认证
+Route::post('/auth_add','UserController@auth_add');
 
-Route::get('/buy_single', 'IndexController@buy_single');
 
-Route::get('/career', 'IndexController@career');
+/**
+ * 房屋详情
+ */
+Route::get('/House/single', 'HouseController@single');
+//评论处理
+Route::get('/House/adddesc', 'HouseController@adddesc');
+//收藏
+Route::get('/House/collect', 'HouseController@collect');
 
-Route::get('/faqs', 'IndexController@faqs');
+//收藏
+Route::get('/House/order', 'HouseController@order');
 
-Route::get('/feedback', 'IndexController@feedback');
+//房屋保障
+Route::get('/index/safe', 'IndexController@safe');
+//理想搜索
+Route::post('/index/searchhouse', 'IndexController@searchhouse');
 
-Route::get('/loan', 'IndexController@loan');
+//房源列表
+Route::get('/House/index', 'HouseController@index');
+//热买房
+Route::get('/House/hot', 'HouseController@hot');
+//精品房
+Route::get('/House/best', 'HouseController@best');
+//推荐房
+Route::get('/House/tui', 'HouseController@tui');
 
-Route::get('/loan_single', 'IndexController@loan_single');
-
-Route::get('/privacy', 'IndexController@privacy');
-
-Route::get('/register', 'IndexController@register');
-
-Route::get('/single', 'IndexController@single');
-
-Route::get('/suggestion', 'IndexController@suggestion');
-
-Route::get('/terms', 'IndexController@terms');
-
-Route::get('/typo', 'IndexController@typo');
-
-Route::get('/contact', 'IndexController@contact');
-
-Route::get('/mobile_app', 'IndexController@mobile_app');
-
-Route::get('/top', 'IndexController@top');
-
-Route::get('/footer', 'IndexController@footer');
+//获取手机短信
+Route::get('/tel','UserController@tel');
