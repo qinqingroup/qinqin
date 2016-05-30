@@ -65,7 +65,6 @@ class HouseController extends Controller
                     'house_boutique'=>$house_boutique,
                     'house_activity'=>$house_activity,
                     'house_heat'=>$house_heat,
-            		'house_video'=>$house_video,
                   ])->execute();
             
             
@@ -91,7 +90,7 @@ class HouseController extends Controller
 				if($photo_url && $model->validate())
 				{
 					foreach ($photo_url as $file) {
-						$file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
+						$file->saveAs('img/' . $file->baseName . '.' . $file->extension);
 						//图片路径
 						$photo_urls = $file->baseName . '.' . $file->extension;
 						
